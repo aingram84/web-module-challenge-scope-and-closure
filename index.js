@@ -124,10 +124,18 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
-
+function getInningScore(inning) {
+  let homeScore = 0;
+  let awayScore = 0;
+  homeScore += inning();
+  awayScore += inning();
+  let finalScoreObj = {
+    Home: homeScore,
+    Away: awayScore
+  }
+  return finalScoreObj;
 }
+console.log(getInningScore(inning));
 
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
